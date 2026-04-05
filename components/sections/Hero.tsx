@@ -1,14 +1,29 @@
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background video */}
+      {/* Background video: スマホ用（縦長） */}
+      <div className="block sm:hidden absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover"
+        >
+          <source src="/image/steamlab_sp.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* Background video: デスクトップ用（横長） */}
       <video
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover hidden sm:block"
       >
         <source src="/image/steamlab.mp4" type="video/mp4" />
       </video>
@@ -30,9 +45,8 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
-            <span className="text-orange-400">「好き」</span>が見つかる。
-            <br />
-            <span className="text-teal-300">「できた」</span>が積み重なる。
+            <span className="block"><span className="text-orange-400">「好き」</span>が見つかる。</span>
+            <span className="block"><span className="text-teal-300">「できた」</span>が重なる。</span>
           </h1>
 
           {/* Sub headline */}
