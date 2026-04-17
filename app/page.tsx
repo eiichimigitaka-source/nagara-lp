@@ -6,6 +6,7 @@ import Features from "@/components/sections/Features";
 import Testimonials from "@/components/sections/Testimonials";
 import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
+import Access from "@/components/sections/Access";
 import CTAForm from "@/components/sections/CTAForm";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <FAQ />
+      <Access />
       <CTAForm />
       <Footer />
     </main>
